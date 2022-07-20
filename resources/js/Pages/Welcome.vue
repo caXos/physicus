@@ -87,7 +87,7 @@ defineProps({
 
                         <div class="ml-12">
                             <div class="mt-2 text-orange-600 dark:text-orange-400 text-sm">
-                                Aqui podem ir mais informações de algum tipo...
+                                Aqui podem ir mais informações de algum tipo... teste
                             </div>
                         </div>
                     </div>
