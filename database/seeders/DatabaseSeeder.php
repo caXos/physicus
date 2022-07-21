@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory()->create([
             'name' => 'Jorge Gomez',
             'email' => 'dom_caxos@hotmail.com',
-            'password' => bcrypt('1De$ejonoturno'),
+            'password' => bcrypt('physicus'),
         ]);
         \App\Models\User::factory()->create([
             'name' => 'Juliana',
@@ -40,6 +40,14 @@ class DatabaseSeeder extends Seeder
             'name' => 'Priscila',
             'email' => 'priscilas@physicus.fisio.br',
             'password' => bcrypt('physicus'),
+        ]);
+        $this->call([
+            AgendaSeeder::class,
+            AparelhoSeeder::class,
+            AtividadeSeeder::class,
+            FinanceiroSeeder::class,
+            PacienteSeeder::class,
+            PlanoSeeder::class,
         ]);
     }
 }
