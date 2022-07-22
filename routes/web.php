@@ -4,6 +4,8 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+use App\Http\Controllers\FinanceiroController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,5 +29,15 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::group(['middleware' => 'auth:sanctum'], function() {
+    Route::get('/financeiro', [FinanceiroController::class, 'index'])->middleware(['auth', 'verified'])->name('financeiro');
+
+    // Route::post('sugerir', [BabyNameController::class, 'store'])->name('criarsugestao');
+
+    // // Route::get('/liked/{id_babyname}', [LikeController::class, 'getLiked'])->name('getLiked');
+    // Route::post('/like/{id_babyname}', [LikeController::class, 'like'])->name('like');
+    // Route::post('/dislike/{id_babyname}', [LikeController::class, 'dislike'])->name('dislike');
+});
 
 require __DIR__.'/auth.php';
