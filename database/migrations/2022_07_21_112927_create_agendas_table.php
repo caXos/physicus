@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('agendas', function (Blueprint $table) {
             $table->id();
             $table->date('date');
-            $table->time('hour');
+            $table->time('time');
+            $table->boolean('done');
             $table->timestamps();
         });
     }

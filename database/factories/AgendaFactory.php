@@ -18,7 +18,8 @@ class AgendaFactory extends Factory
     {
         return [
             'date' => fake()->dateTimeThisYear('+1 week'),
-            'hour' => fake()->time(),
+            'time' => fake()->time(),
+            'done' => false,
         ];
     }
 }

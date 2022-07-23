@@ -14,8 +14,8 @@ defineProps({
 
     <div class="relative flex items-top justify-center min-h-screen bg-orange-100 dark:bg-orange-900 sm:items-center sm:pt-0">
         <div v-if="canLogin" class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-            <Link v-if="$page.props.auth.user" :href="route('dashboard')" class="text-sm text-orange-700 underline">
-                Dashboard
+            <Link v-if="$page.props.auth.user" :href="route('agenda')" class="text-sm text-orange-700 underline">
+                Agenda
             </Link>
 
             <template v-else>

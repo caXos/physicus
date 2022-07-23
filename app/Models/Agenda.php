@@ -16,6 +16,7 @@ class Agenda extends Model
      */
     protected $fillable = [
         'date',
-        'hour',
+        'time',
+        'done',
     ];
 }

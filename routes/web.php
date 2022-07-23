@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 use App\Http\Controllers\FinanceiroController;
+use App\Http\Controllers\AgendaController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +28,11 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/agenda', function () {
+//     return Inertia::render('Agenda');
+// })->middleware(['auth', 'verified'])->name('agenda');
+
+Route::get('/agenda', [AgendaController::class, 'index'])->middleware(['auth', 'verified'])->name('agenda');
 
 Route::group(['middleware' => 'auth:sanctum'], function() {
     Route::get('/financeiro', [FinanceiroController::class, 'index'])->middleware(['auth', 'verified'])->name('financeiro');

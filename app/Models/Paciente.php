@@ -40,4 +40,12 @@ class Paciente extends Model
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function agendas() {
+        return $this->hasMany(Agenda::class);
+    }
+
+    public function atividades() {
+        return $this->hasMany(Atividade::class);
+    }
 }

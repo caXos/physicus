@@ -42,12 +42,12 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('physicus'),
         ]);
         $this->call([
-            AgendaSeeder::class,
             AparelhoSeeder::class,
             AtividadeSeeder::class,
             FinanceiroSeeder::class,
-            PacienteSeeder::class,
             PlanoSeeder::class,
+            PacienteSeeder::class,
+            AgendaSeeder::class,
         ]);
     }
 }

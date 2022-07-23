@@ -46,7 +46,7 @@ let formatBrazilianReal = Intl.NumberFormat('pt-BR');
 
 <template>
 
-    <Head title="Dashboard" />
+    <Head title="Financeiro" />
 
     <BreezeAuthenticatedLayout>
         <template #header>
