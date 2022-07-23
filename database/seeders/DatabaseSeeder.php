@@ -41,6 +41,11 @@ class DatabaseSeeder extends Seeder
             'email' => 'priscilas@physicus.fisio.br',
             'password' => bcrypt('physicus'),
         ]);
+        \App\Models\User::factory()->create([
+            'name' => 'Visitante',
+            'email' => 'visitante@physicus.fisio.br',
+            'password' => bcrypt('physicus'),
+        ]);
         $this->call([
             AparelhoSeeder::class,
             AtividadeSeeder::class,

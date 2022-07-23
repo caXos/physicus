@@ -1,8 +1,4 @@
 <script setup>
-import { Link } from '@inertiajs/inertia-vue3';
-import { computed } from 'vue';
-import { ref } from 'vue'
-
 const props = defineProps({
     date: String,
     time: String,

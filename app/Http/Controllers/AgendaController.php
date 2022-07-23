@@ -13,7 +13,7 @@ class AgendaController extends Controller
         // $blah = Agenda::all()->sortBy('date');
         // echo $blah;
         $agendas = Agenda::all()->sortBy('date')->toArray();
-        // echo implode(',',$agendas);
+        // echo json_encode($agendas);
         return Inertia::render('Agenda', ['agendas' => $agendas]);
     }
 }

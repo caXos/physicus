@@ -1,11 +1,14 @@
 <script setup>
 import BreezeAuthenticatedLayout from '@/Layouts/Authenticated.vue';
 import AgendaCard from '@/Components/AgendaCard.vue';
+import FAB from '@/Components/FloatingActionButton.vue';
 import { Head } from '@inertiajs/inertia-vue3';
+import { computed } from 'vue';
 
 const props = defineProps({
-    agendas: Object
+    agendas: Object,
 });
+
 </script>
 
 <template>
@@ -22,11 +25,12 @@ const props = defineProps({
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 bg-white border-b border-gray-200">
-                        <!-- (item, index) -->
+                        <FAB model="Compromisso" acao="alert('Adicionar Compromisso');"></FAB>
                         <AgendaCard v-for="(agenda, index) in agendas" 
                                 :key="index" 
                                 :date="agenda.date"
-                                :time="agenda.time" />
+                                :time="agenda.time"
+                                :id="agenda.id" />
                         <!-- <AgendaCard v-for="agenda in agendas" 
                                 :key="agenda.id" 
                                 :date="agenda.date"
