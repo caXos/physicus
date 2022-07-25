@@ -1,6 +1,7 @@
 <script setup>
 import BreezeAuthenticatedLayout from '@/Layouts/Authenticated.vue';
 import AgendaCard from '@/Components/AgendaCard.vue';
+import AgendaModal from '@/Components/AgendaModal.vue';
 import FAB from '@/Components/FloatingActionButton.vue';
 import { Head } from '@inertiajs/inertia-vue3';
 import { computed } from 'vue';
@@ -39,6 +40,6 @@ const props = defineProps({
                 </div>
             </div>
         </div>
-
+        <AgendaModal></AgendaModal>
     </BreezeAuthenticatedLayout>
 </template>
